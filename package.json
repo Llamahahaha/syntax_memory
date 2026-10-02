@@ -3,7 +3,7 @@
   "displayName": "Syntax Memory",
   "description": "Notices new syntax you type and lets you save it to a personal list for later review.",
   "version": "0.0.1",
-  "publisher": "Erika Vaz",
+  "publisher": "erika-vaz",
   "license": "MIT",
   "repository": { "type": "git", "url": "https://github.com/llamahahaha/syntax-memory.git" },
   "categories": ["Other"],
