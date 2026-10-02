@@ -19,7 +19,7 @@ You can also use the quick-fix menu on any keyword or operator under your cursor
 
 <img width="522" height="242" alt="image" src="https://github.com/user-attachments/assets/a19c940b-d6ec-4ba9-8ea3-a22e5f95c233" />
 
-On click
+(The image shows options available on click)
 
 ## What counts as "syntax"?
 
