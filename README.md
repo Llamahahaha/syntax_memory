@@ -70,7 +70,7 @@ For each saved item it stores the token, language, file path, line number, and t
 
 ## Install from a release
 
-If you'd rather not build it yourself, download the latest `.vsix` file from the [Releases page](https://github.com/Llamahahaha/syntax_memory/releases) and install it from a terminal:
+If you'd rather not build it yourself, download the `.vsix` file and install it from a terminal:
 
 ```
 codium --install-extension syntax-memory-0.0.1.vsix
