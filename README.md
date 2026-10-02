@@ -18,6 +18,7 @@ A status bar item (**"N new syntax"**) appears when the current file has unrevie
 You can also use the quick-fix menu on any keyword or operator under your cursor, even if you weren't prompted, to save it or mark it as known.
 
 <img width="522" height="242" alt="image" src="https://github.com/user-attachments/assets/a19c940b-d6ec-4ba9-8ea3-a22e5f95c233" />
+
 On click
 
 ## What counts as "syntax"?
