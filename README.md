@@ -64,6 +64,16 @@ For each saved item it stores the token, language, file path, line number, and t
 - **Large files** (over 300 KB) are skipped for live detection too.
 - **Language detection** uses the editor's language mode, so an unsaved file needs its language set (bottom-right of the window) or a recognized extension like `.py`.
 
+## Install from a release
+
+If you'd rather not build it yourself, download the latest `.vsix` file from the [Releases page](https://github.com/YOUR-USERNAME/syntax-memory/releases) and install it from a terminal:
+
+```
+codium --install-extension syntax-memory-0.0.1.vsix
+```
+
+Use `code` instead of `codium` if you're on VS Code. You can also install it from inside the editor: open the Extensions panel, click the `...` menu at the top, choose **Install from VSIX**, and pick the downloaded file. Restart the editor afterwards if the extension doesn't appear right away.
+
 ## Install from source
 
 ```
