@@ -1,0 +1,59 @@
+{
+  "name": "syntax-memory",
+  "displayName": "Syntax Memory",
+  "description": "Notices new syntax you type and lets you save it to a personal list for later review.",
+  "version": "0.0.1",
+  "publisher": "Erika Vaz",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/llamahahaha/syntax-memory.git" },
+  "categories": ["Other"],
+  "keywords": ["syntax", "learning", "notes", "tree-sitter"],
+  "engines": { "vscode": "^1.85.0" },
+  "main": "./extension.js",
+  "activationEvents": ["onStartupFinished"],
+  "contributes": {
+    "views": {
+      "explorer": [{ "id": "syntaxMemory.view", "name": "Syntax Memory" }]
+    },
+    "commands": [
+      { "command": "syntaxMemory.saveManual", "title": "Syntax Memory: Save Syntax Manually…", "icon": "$(add)" },
+      { "command": "syntaxMemory.markKnownBulk", "title": "Syntax Memory: Mark Syntax as Known (Pick from Language)…" },
+      { "command": "syntaxMemory.manageKnown", "title": "Syntax Memory: Manage Known Syntax…" },
+      { "command": "syntaxMemory.scanWorkspace", "title": "Syntax Memory: Scan Workspace and Mark Existing Syntax as Known", "icon": "$(search)" },
+      { "command": "syntaxMemory.review", "title": "Syntax Memory: Review New Syntax in This File" },
+      { "command": "syntaxMemory.remove", "title": "Remove from List", "icon": "$(trash)" },
+      { "command": "syntaxMemory.open", "title": "Open Location" },
+      { "command": "syntaxMemory.save", "title": "Syntax Memory: Save" },
+      { "command": "syntaxMemory.markKnown", "title": "Syntax Memory: Mark Known" }
+    ],
+    "menus": {
+      "commandPalette": [
+        { "command": "syntaxMemory.remove", "when": "false" },
+        { "command": "syntaxMemory.open", "when": "false" },
+        { "command": "syntaxMemory.save", "when": "false" },
+        { "command": "syntaxMemory.markKnown", "when": "false" }
+      ],
+      "view/title": [
+        { "command": "syntaxMemory.saveManual", "when": "view == syntaxMemory.view", "group": "navigation@1" },
+        { "command": "syntaxMemory.scanWorkspace", "when": "view == syntaxMemory.view", "group": "navigation@2" }
+      ],
+      "view/item/context": [
+        { "command": "syntaxMemory.remove", "when": "view == syntaxMemory.view && viewItem == saved", "group": "inline" }
+      ]
+    },
+    "configuration": {
+      "title": "Syntax Memory",
+      "properties": {
+        "syntaxMemory.pasteThreshold": {
+          "type": "number",
+          "default": 200,
+          "description": "Edits that insert more than this many characters at once are treated as pastes and ignored."
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "tree-sitter-wasms": "^0.1.13",
+    "web-tree-sitter": "0.20.8"
+  }
+}
